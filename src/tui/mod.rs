@@ -27,10 +27,10 @@ macro_rules! setup_terminal {
         terminal.clear()?;
 
         // User event handler
-        enum Event<I> {
-            Input(I),
-            Tick,
-        }
+        // enum Event<I> {
+        //     Input(I),
+        //     Tick,
+        // }
 
         let (tx, rx) = mpsc::channel();
         let tick_rate = Duration::from_millis(200);
