@@ -1,5 +1,31 @@
 #[macro_export]
 /// Set up `ratatui` terminal interface with `crossterm` backend and `mpsc` event handling
+///
+/// # Usage
+/// 
+/// ## Add dependencies to crate
+/// `cargo add ratatui crossterm thread mpsc`
+/// 
+/// ## Define `Event` enum
+/// ```
+/// enum Event<I> {
+///     Input(I),
+///     Tick
+/// }
+/// ```
+/// 
+/// ## Example
+/// ```
+/// fn main -> Result<(), std::error::Error> {
+///     let (mut terminal, rx) = stdr::setup_terminal!();
+///     loop {
+///         terminal.draw(...);
+///         ...
+///     }
+/// 
+///     Ok(())
+/// }
+/// ```
 macro_rules! setup_terminal {
     () => {{
         // Imports
