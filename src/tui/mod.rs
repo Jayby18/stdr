@@ -1,3 +1,4 @@
+#[macro_export]
 macro_rules! setup_terminal {
     () => {{
         // Set up terminal
