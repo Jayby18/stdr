@@ -1,4 +1,5 @@
 #[macro_export]
+/// Set up `ratatui` terminal interface with `crossterm` backend and `mpsc` event handling
 macro_rules! setup_terminal {
     () => {{
         // Imports
@@ -59,6 +60,7 @@ macro_rules! setup_terminal {
 }
 
 #[macro_export]
+/// Restore `ratatui`/`crossterm` terminal
 macro_rules! restore_terminal {
     ( $terminal:expr ) => {
         // Imports
