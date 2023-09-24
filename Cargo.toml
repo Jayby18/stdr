@@ -9,7 +9,7 @@ license = "MIT"
 license-file = "LICENSE"
 keywords = ["tui"]
 categories = []
-exclude = []
+exclude = ["src/main.rs"]
 description = "A custom standard library for things I use often."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
